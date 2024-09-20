@@ -1,0 +1,31 @@
+import { ICatalogRepository } from "../interfaces/catalogRepository.interface";
+
+export class CatalogService {
+
+    private _repository: ICatalogRepository
+
+    constructor(repository: ICatalogRepository) {
+        this._repository = repository
+    }
+
+    async createProduct(input: any) {
+        const data = await this._repository.create(input);
+        return data;
+    }
+
+    updateProduct(input: any) {
+
+    }
+
+    getAllProducts(limit: number, offset: number) {
+
+    }
+
+    getProduct(id: number) {
+
+    }
+
+    deleteProduct(id: number) {
+
+    }
+}
