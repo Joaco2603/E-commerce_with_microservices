@@ -3,6 +3,8 @@ import catalogRouter from "./api/catalog.routes";
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/", (req, res, next) => {
     return res.json({ msg: "message" });
 });
