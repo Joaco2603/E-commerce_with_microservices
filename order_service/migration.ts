@@ -2,6 +2,7 @@ import { Pool } from "pg";
 import { DB_URL } from "./src/config";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { migrate } from "drizzle-orm/node-postgres/migrator";
+import 'dotenv/config'
 
 
 async function runMigration() {
