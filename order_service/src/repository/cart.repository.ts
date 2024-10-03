@@ -10,8 +10,6 @@ const createCart = async (input: any): Promise<{}> => {
         customerId: 1,
     }).returning({ cartId: carts.id });
 
-    console.log(result);
-
     return Promise.resolve({
         message: "fake response from cart repository",
         input: input

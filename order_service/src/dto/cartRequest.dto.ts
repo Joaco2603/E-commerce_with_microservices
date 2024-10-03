@@ -2,7 +2,7 @@ import { Static, Type } from "@sinclair/typebox"
 
 export const CartCreateDto = Type.Object({
     productId: Type.Integer(),
-    customerId: Type.String(),
+    customerId: Type.Integer(),
     qty: Type.Integer()
 });
 

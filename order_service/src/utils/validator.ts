@@ -3,13 +3,13 @@ import Ajv, { Schema } from "ajv";
 const ajv = new Ajv();
 
 export const ValidateRequest = <T>(requestBody: unknown, schema: Schema) => {
-    const ValidatedData = ajv.compile<T>(schema);
+    const validatedData = ajv.compile<T>(schema);
 
-    if (ValidatedData(requestBody)) {
+    if (validatedData(requestBody)) {
         return false;
     }
 
-    const errors = ValidatedData.errors?.map((err) => err.message);
+    const errors = validatedData.errors?.map((err) => err.message);
 
     return errors && errors[0];
-}
+};
